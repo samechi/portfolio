@@ -1,0 +1,15 @@
+section{text-align: center;}
+.flex-container{
+  display: flex;
+  justify-content: space-around;
+}
+.flex-item{
+  color: white;
+  margin: 0 1em 1em;
+  flex-basis: 30%;
+}
+@media screen and (max-width: 780px) {
+  .flex-container{
+    flex-direction: column;
+  }
+}

@@ -1,0 +1,555 @@
+body {
+  font-family: 'Montserrat', 'Helvetica Neue', Arial, 'Hiragino Kaku Gothic ProN', 'Hiragino Sans',
+    Meiryo, sans-serif;
+  font-size: 14px;
+  line-height: 1.8;
+  letter-spacing: 0.8px;
+  color: #000;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  vertical-align: bottom;
+  border-style: none;
+}
+
+/*--------------------------------
+レイアウト
+---------------------------------*/
+.wrapper {
+  padding-top: 73px;
+}
+
+.section {
+  padding: 90px 0;
+}
+
+.section:nth-of-type(even) {
+  background-color: rgba(217, 218, 218, 0.85);
+}
+
+.inner {
+  max-width: 1340px;
+  margin: 0 auto;
+  padding: 0 40px;
+}
+
+/*--------------------------------
+見出し
+---------------------------------*/
+.title {
+  font-size: 34px;
+  font-weight: bold;
+  line-height: 1;
+  margin-bottom: 40px;
+  text-align: center;
+  letter-spacing: 0.05em;
+  color: #000;
+}
+
+/*--------------------------------
+ヘッダー
+---------------------------------*/
+.header {
+  position: fixed;
+  top: 0;
+  z-index: 1;
+  width: 100%;
+  background-color: #fff;
+  box-shadow: 0 5px 10px -6px rgba(0, 0, 0, 0.1);
+}
+
+.header .inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px 40px;
+}
+
+.header-logo {
+  font-size: 20px;
+  font-weight: bold;
+  line-height: 1.2;
+  margin-right: 20px;
+  letter-spacing: 0.05em;
+}
+
+.header-logo a {
+  color: #333;
+}
+
+.header-nav-list {
+  display: flex;
+  justify-content: space-between;
+  list-style: none;
+}
+
+.header-nav-item:not(:last-child) {
+  margin-right: 20px;
+}
+
+.header-nav-item a {
+  position: relative;
+  font-size: 13px;
+  font-weight: bold;
+  display: inline-block;
+  padding: 5px 0;
+  transition: 0.3s;
+  letter-spacing: 0.05em;
+  color: #333;
+}
+
+.header-nav-item a:after {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  width: 0;
+  height: 3px;
+  content: '';
+  transition: 0.3s;
+  -webkit-transform: translateX(-50%);
+  transform: translateX(-50%);
+  background-color: #333;
+}
+
+.header-nav-item a:hover:after {
+  width: 100%;
+}
+
+/*--------------------------------
+メインビジュアル
+---------------------------------*/
+.main-visual {
+  display: flex;
+  color: #394292;
+  align-items: center;
+  justify-content: center;
+  height: 85vh;
+  text-align: center;
+  font-family: Gulim;
+}
+
+.main-visual-inner {
+  padding: 0 40px;
+}
+
+.main-visual-title {
+  font-size: 60px;
+  font-weight: bold;
+  line-height: 1.2;
+  margin-bottom: 5px;
+  letter-spacing: 0.1em;
+}
+
+.main-visual-subtitle {
+  font-size: 20px;
+  font-weight: bold;
+  line-height: 1;
+  margin-bottom: 40px;
+  letter-spacing: 0.08em;
+}
+
+.main-visual-profile {
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.main-visual-img {
+  width: 20%;
+  margin-right: 30px;
+  border-radius: 50%;
+}
+
+.main-visual-img img {
+  border-radius: 50%;
+}
+
+.main-visual-text {
+  flex: 1;
+}
+
+.main-visual-sub {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 50vh;
+  text-align: center;
+}
+
+.main-visual-title-sub {
+  font-size: 40px;
+  font-weight: bold;
+  margin-bottom: 5px;
+  letter-spacing: 0.1em;
+}
+
+.main-visual-img-sub {
+  width: 15%;
+  margin-right: 20px;
+}
+
+.main-visual-img-sub img {
+  border-radius: 50%;
+}
+
+/*--------------------------------
+Works
+---------------------------------*/
+.works-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: -40px;
+}
+
+.works-item {
+  width: 31.74603%;
+  margin-right: 1.5873%;
+  margin-bottom: 40px;
+  color: #333333;
+}
+
+.works-img img {
+  border: 1px solid #e6e6e6;
+}
+
+.btn-denim {
+  display: inline-block;
+  max-width: 180px;
+  text-align: center;
+  background-color: #0011ff27;
+  font-size: 16px;
+  color: #741010;
+  text-decoration: none;
+  font-weight: bold;
+  padding: 8px 16px;
+  border: 1px dashed #fff;
+  box-shadow: 0px 0px 0px 2px #9e2121;
+  outline: none;
+  position: relative;
+  /* box-shadowで外枠を*/
+}
+
+
+.btn-denim:hover{
+    border: 2px solid transparent
+}
+
+.btn-denim:hover::before {
+  transform: scaleX(1);
+  transform-origin: left;
+}
+
+.btn-denim::before {
+  position: absolute;
+  top: 0;
+  left: 0;
+  content: "";
+
+  width: 100%;
+  height: 100%;
+  background: #1100ff;
+  transform: scaleX(0);
+  transform-origin: right;
+  transition: all 0.5s ease;
+  transition-property: transform;
+  z-index: 0;
+  opacity: 0.3;
+
+}
+
+.text{
+  position: relative;
+}
+
+.btn-box {
+  display: inline-block;
+  max-width: 180px;
+  text-align: center;
+  font-size: 16px;
+  color: #9ec34b;
+  text-decoration: none;
+  font-weight: bold;
+  padding: 8px 16px;
+  position: relative;
+  border: 2px solid #9ec34b;
+  transition: 0.4s;
+}
+
+.btn-box:hover {
+  border: 2px solid transparent;
+  color: #000;
+}
+
+.btn-box:before,
+.btn-box:after {
+  width: 100%;
+  height: 100%;
+  z-index: 3;
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  box-sizing: border-box;
+  transform: scale(0);
+  transition: 0.2s;
+}
+
+.btn-box:before {
+  border-bottom: 2px solid #000;
+  border-left: 2px solid #000;
+  transform-origin: 100% 0%;
+}
+
+.btn-box:after {
+  border-top: 2px solid #000;
+  border-right: 2px solid #000;
+  transform-origin: 100% 0.6%;
+}
+
+.btn-box:hover:after,
+.btn-box:hover:before {
+  transform: scale(1);
+}
+
+
+/* Photo*/
+section {text-align: center;}
+.flex-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+.flex-item {
+  background-color: #990000;
+  color: white;
+  margin: 0 1em 1em;
+  flex-basis: 30%;
+}
+
+@media screen and (max-width: 780px) {
+  .flex-container{
+    flex-direction: column;
+  }
+}
+
+
+
+/*--------------------------------
+Skill
+---------------------------------*/
+.skill-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin-bottom: -50px;
+}
+
+.skill-item {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  width: 48%;
+  margin-bottom: 50px;
+}
+
+.skill-img {
+  width: 60px;
+  height: auto;
+  margin-right: 20px;
+}
+
+.skill-body {
+  flex: 1;
+}
+
+.skill-name {
+  margin-bottom: 3px;
+  font-size: 14px;
+  line-height: 1.8;
+  letter-spacing: 0.8px;
+}
+
+/*--------------------------------
+About
+---------------------------------*/
+.about-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+table {
+  width: 80%;
+  font-size: 1.2rem;
+  border-collapse: collapse;
+  margin: 0 auto;
+    text-align: left;
+}
+
+th{
+  padding: 10px;
+}
+
+td {
+  padding: 10px;
+}
+
+tr:nth-child(odd) {
+  background-color: #9e9e9e5e;
+}
+
+/*--------------------------------
+ページトップ
+---------------------------------*/
+.page-top {
+  font-weight: bold;
+  padding: 10px;
+  cursor: pointer;
+  text-align: center;
+  background-color: #4c4c4c;
+}
+
+.page-top .material-icons-outlined {
+  vertical-align: bottom;
+  color: #fff;
+}
+
+/*--------------------------------
+フッター
+---------------------------------*/
+.footer {
+  padding: 30px;
+  background-color: #333;
+  color: #797979;
+}
+
+.copyright {
+  font-size: 10px;
+  text-align: center;
+  color: #797979;
+}
+
+.header{
+  text-align: center;
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+.form-title {
+  margin-bottom: 2px;
+  font-size: 1.6rem;
+}
+
+.contact-item input {
+  padding: 5px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  width: 100%;
+}
+
+.contact-item select {
+  padding: 5px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  width: 60%;
+}
+
+.contact-item textarea {
+  padding: 5px;
+  border-radius: 5px;
+  border: 1px solid #862222;
+  height: 100px;
+  width: 100%;
+}
+
+.must {
+  margin-left: 5px;
+  padding: 2px;
+  font-size: 0.8rem;
+  background-color: rgb(132, 32, 32);
+  color: #fff;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+.btn {
+  width: 38.5%;
+  padding: 10px 50px;
+  background-color: #446a8b;
+  font-size: 1.2rem;
+  color: #fff;
+  font-weight: bold;
+  border-radius: 10px;
+  margin-top: 10px;
+  cursor: pointer;
+}
+.nanisitennen{
+  background-color: #e1dfdfd6;
+}
+
+
+/*--------------------------------
+普段どんなことをしているの？
+---------------------------------*/
+.hudan-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin-bottom: -50px;
+
+}
+
+.hudan-item {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  width: 48%;
+  margin-bottom: 50px;
+}
+
+.hudan-img {
+  width: 60px;
+  height: auto;
+  margin-right: 20px;
+}
+
+.hudan-body {
+  flex: 1;
+}
+
+.hudan-name {
+  margin-bottom: 3px;
+  font-size: 14px;
+  line-height: 1.8;
+  letter-spacing: 0.8px;
+}
+
+/* 動くサメ */
+.hudan-same{
+  width: 10%;
+  height: 10%;
+  background-image: url('portfolio\img\透過サメ.PNG'); /* ここにサメ画像のパス */
+  background-size: contain;
+  background-repeat: no-repeat;
+  position: absolute;
+  top: 100px;
+  right: 0;
+  animation: swim 6s linear infinite;
+  opacity: 0.2;
+
+}
+
+@keyframes swim {
+  0% {right: -100%;}
+  100% {right:100%;}
+}
