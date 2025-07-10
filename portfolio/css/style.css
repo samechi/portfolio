@@ -534,20 +534,6 @@ tr:nth-child(odd) {
   letter-spacing: 0.8px;
 }
 
-/* 動くサメ */
-.hudan-same{
-  width: 10%;
-  height: 10%;
-  background-image: url('portfolio\img\透過サメ.PNG'); /* ここにサメ画像のパス */
-  background-size: contain;
-  background-repeat: no-repeat;
-  position: absolute;
-  top: 100px;
-  right: 0;
-  animation: swim 6s linear infinite;
-  opacity: 0.2;
-
-}
 
 @keyframes swim {
   0% {right: -100%;}
