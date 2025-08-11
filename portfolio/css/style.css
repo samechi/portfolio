@@ -539,3 +539,101 @@ tr:nth-child(odd) {
   0% {right: -100%;}
   100% {right:100%;}
 }
+
+@media screen and (max-width: 768px) {
+  body {
+    font-size: 13px;
+    line-height: 1.6;
+  }
+
+  /* レイアウト調整 */
+  .inner {
+    padding: 0 20px;
+  }
+
+  .section {
+    padding: 50px 0;
+  }
+
+  /* 見出し */
+  .title {
+    font-size: 24px;
+    margin-bottom: 20px;
+  }
+
+  /* ヘッダー */
+  .header .inner {
+    flex-direction: column;
+    padding: 10px 20px;
+  }
+  .header-nav-list {
+    flex-direction: column;
+    align-items: center;
+  }
+  .header-nav-item:not(:last-child) {
+    margin-right: 0;
+    margin-bottom: 10px;
+  }
+
+  /* メインビジュアル */
+  .main-visual {
+    height: auto;
+    padding: 40px 0;
+  }
+  .main-visual-title {
+    font-size: 36px;
+  }
+  .main-visual-subtitle {
+    font-size: 16px;
+  }
+  .main-visual-profile {
+    flex-direction: column;
+    align-items: center;
+  }
+  .main-visual-img {
+    width: 40%;
+    margin: 0 0 20px 0;
+  }
+
+  /* Works */
+  .works-list {
+    flex-direction: column;
+    align-items: center;
+  }
+  .works-item {
+    width: 90%;
+    margin-right: 0;
+  }
+
+  /* Skill */
+  .skill-list {
+    flex-direction: column;
+  }
+  .skill-item {
+    width: 100%;
+  }
+
+  /* 普段どんなことをしているの？ */
+  .hudan-list {
+    flex-direction: column;
+  }
+  .hudan-item {
+    width: 100%;
+  }
+
+  /* Contactフォーム */
+  .contact-form {
+    width: 100%;
+    padding: 0 10px;
+  }
+  .btn {
+    width: 100%;
+    font-size: 1rem;
+  }
+
+  /* テーブル */
+  table {
+    width: 100%;
+    font-size: 1rem;
+  }
+}
